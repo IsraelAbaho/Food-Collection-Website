@@ -54,23 +54,8 @@ let time = `${days} Days  |   ${hrs}  Hrs   |    ${mins} Mins  |  ${secs}  Sec`;
 }
 }
 
-// TOGGLE CHEF---------------------------------------------------->
+// Hey i am stack with adding item to cart, i ceated an addItemToCart function and created a new element method to but still can not getting items to cart, i don't know where i am messing up with the code. Please help! Below are the code lines and in the main.html is the dom code, ii also created a new file for the page you can access it by clicking the cart icon in the header. Thanks.
 
-// let toggleChefBtn = document.getElementById('btn'),
-//       chefList = document.querySelectorAll(' .chefBox');
-// toggleChefBtn.addEventListener('click', function(){
-//     for(let u = 0; u<chefList.length; u++){
-//         chefList[u].classList.remove('hidden')
-//     }
-//     this.classList.add('hidden')
-    
-// })
-
-   
-
-     
-
-// ADD ITEMS TO CART
 
 let allButtons = document.querySelectorAll('.toCartBtn');
 let cartItem = document.querySelector('.cartItem')[0];
