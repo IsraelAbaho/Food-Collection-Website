@@ -1671,6 +1671,9 @@ li {
   button {
     font-size: 1.2rem;
   }
+  .boxes .sHideNews {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1440px) {
