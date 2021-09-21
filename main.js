@@ -54,45 +54,43 @@ let time = `${days} Days  |   ${hrs}  Hrs   |    ${mins} Mins  |  ${secs}  Sec`;
 }
 }
 
-// Hey i am stack with adding item to cart, i ceated an addItemToCart function and created a new element method to but still can not getting items to cart, i don't know where i am messing up with the code. Please help! Below are the code lines and in the main.html is the dom code, ii also created a new file for the page you can access it by clicking the cart icon in the header. Thanks.
 
 
-let allButtons = document.querySelectorAll('.toCartBtn');
-let cartItem = document.querySelector('.cartItem')[0];
-for (let i = 0; i < allButtons.length; i++){
-    allButtons[i].addEventListener('click', addItemToCart)
+
+const addToCartBtn = document.querySelectorAll('.addToCartBtn');
+const mainContainer = document.getElementsByTagName('tbody')[0];
+
+for(let i =0; i<addToCartBtn.length; i++){
+    addToCartBtn[i].addEventListener('click', addToCart)
 }
+function addToCart(event){
+let btn = event.target;
 
-function addItemToCart(event){
-    let clickedButton = event.target;
-    let buttonParent = clickedButton.parentElement.parentElement;
-   let buttonDescParent = buttonParent.parentElement;
-   let buttonMainParent = buttonDescParent.parentElement;
-   let itemName = buttonDescParent.children[2].innerText
-   let itemImg = buttonMainParent.children[0].src;
-   let itemPrice = buttonParent.children[0].innerText;
-   let itemGrams = buttonDescParent.children[3].innerText;
+let itemName = btn.parentElement.parentElement.children[1].children[0].innerText;
+let itemPrice = btn.parentElement.parentElement.children[3].innerText;
+let itemImage = btn.parentElement.parentElement.children[0].children[0].src;
 
-   let itemContainer = document.createElement('div')
-   itemContainer.innerHTML = `<div class="itemImg">
-   <img src="${itemImg}" alt="Food Image" class="cartImg">
+
+let cartContainer = document.createElement('tr');
+cartContainer.innerHTML = ` <td>
+<div class="imageInfor">
+    <img src="${itemImage}" alt="Food Image">
+    <div class="itemText">
+        <span class="itemName">${itemName}</span>
+       <small>Size: 234g</small>
+        
+    </div>
 </div>
-<div class="itemInfo">
-   <div class="description">
-       <span class="itemName">${itemName}</span>
-       <i class='bx bx-x closeIcon icon' ></i>
-   </div>
-   <span class="itemDesc">Size: ${itemGrams}</span>
-   <div class="priceDiv">
-       <span class="itemPrice">$ ${itemPrice}</span>
-       <div class="qtyControl">
-           <i class='bx bx-minus icon minusIcon'></i>
-           <span class="qnty">1</span>
-           <i class='bx bx-plus icon plusIcon' ></i>
-       </div>
-   </div>
-</div>`
-cartItem.append(itemContainer)
+</td>
+<td>
+<input type"number" value="1">
+</td>
+<td>
+<span class="itemPrice">${itemPrice}</span>
+</td>`
+
+mainContainer.appendChild(cartContainer); 
+
 
 }
 
