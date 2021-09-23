@@ -575,7 +575,7 @@ li {
     border-radius: 3px;
     box-shadow: 0 4px 10px rgba(88, 129, 112, 0.678);
     transition: 0.3s;
-    &:hover{
+    &:hover {
       transform: translateY(-10px);
     }
 
@@ -695,7 +695,6 @@ li {
         }
       }
     }
-   
   }
 }
 
@@ -731,184 +730,152 @@ li {
       font-weight: 500;
     }
   }
-
   .middleSection {
-    .itemRow {
+    width: 100%;
+    padding: 0 1rem;
+    .firstSide {
       display: flex;
       align-items: center;
       width: 100%;
-      // later width 80%
-      padding: 1rem 0;
-      border-top: 1px solid var(--paragraphColor);
-      .itemImg {
-        flex-basis: 25%;
-        height: 80px;
+      margin-bottom: 1rem;
+      box-shadow: 2px 2px 4px #ccc;
+      padding: .5rem 1rem;
+      &:hover{
+        background: rgb(251, 251, 251);
+      }
+      .itemName{
+        font-weight: 500;
+      }
+      .imgDivv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+      }
+      img {
         width: 80px;
-        position: relative;
-        border-radius: 10%;
-        overflow: hidden;
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          object-fit: cover;
-          height: 100%;
-          width: 100%;
-        }
+        height: 80px;
+        margin-right: 1rem;
+         border: 5px solid rgba(221, 221, 221, 0.781);
       }
 
-      .itemInfo {
-        flex-basis: 75%;
-        margin-left: 1rem;
+      .closeIcon{
+        color: var(--secondaryColor);
+      }
 
-        .description {
+      .topSide {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--secondaryColor);
+      }
+      .itemGram {
+        display: block;
+        color: var(--paragraphColor);
+      }
+
+      .bottomSide {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .itemPrice {
+          font-weight: 600;
+          color: var(--secondaryColor);
+        }
+
+        
+        .controls {
           display: flex;
-          width: 100%;
-          align-items: center;
-          justify-content: space-between;
-          .closeIcon {
-            font-size: 20px;
+          .count {
+            padding: 0 10px;
             color: var(--secondaryColor);
           }
-          .itemName {
-            font-weight: 500;
-          }
-        }
-        .itemDesc {
-          color: var(--paragraphColor);
-          font-size: 15px;
-        }
-
-        .priceDiv,
-        .qtyControl {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          .qtyControl .icon {
-            font-size: 20px;
-          }
-          .minusIcon {
-            margin-right: 10px;
-            padding: 3px;
-            border-radius: 50%;
-            color: var(--primaryColor);
+          .minusIcon,
+          .plusIcon {
             border: 1px solid var(--primaryColor);
-            &:hover {
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondaryColor);
+            &:hover{
               background: var(--primaryColor);
               color: var(--textColor);
             }
           }
-          .plusIcon {
-            margin-left: 10px;
-            background: var(--primaryColor);
-            color: var(--textColor);
-            padding: 3px;
-            border-radius: 50%;
-
-            &:hover {
-              background: var(--primaryHover);
-            }
-          }
         }
       }
     }
-  }
-
-  .promoDiv {
-    margin: 1rem auto;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--textColor);
-    padding: 1rem;
-    border-radius: 0.6rem;
-    font-size: 12px;
-    color: var(--paragraphColor);
-
-    .promoBtn span {
-      padding: 8px 15px;
-      background: var(--primaryColor);
-      color: var(--textColor);
-      border-radius: 10px;
-      &:hover {
-        background: var(--primaryHover);
-      }
-    }
-  }
-
-  .bottomSection {
-    width: 85%;
-    display: grid;
-    margin-top: 1rem;
-    margin: auto;
-    .bottomRow {
+    .cartPromoDiv{
+      width: 100%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--textColor);
-      .bottomTitle {
-        font-weight: 500;
-      }
-      .bottomPrice {
-        font-weight: 600;
-        font-family: "montserrat", "san serif";
-      }
-    }
-    .bottomBtn {
-      margin: 1rem auto;
-      display: inline-block;
-
-      button {
+      justify-content: space-between;
+      padding: 10px 5px;
+      background: var(--textColor);
+      color: var(--paragraphColor);
+      border-radius: 3px;
+      margin: 1rem 0;
+      box-shadow: 2px 2px 4px #ccc;
+      .cta{
         background: var(--primaryColor);
-        border: none;
-        outline: none;
+        padding: 5px 10px;
         color: var(--textColor);
-        padding: 0.8rem 1.5rem;
-        border-radius: 3rem;
-        transition: background 0.3s;
-        &:hover {
+        border-radius: 3px;
+        &:hover{
           background: var(--primaryHover);
         }
       }
+      
     }
+    
+
   }
-  table {
-    padding: 2rem;
-    width: 100%;
-    margin: auto;
-    background: rgb(239, 241, 241);
-  
-    tr {
+  .calcSection{
+    padding: 1rem ;
+   .row{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 1rem 0;
+     border-bottom: 1px solid var(--textColor);
+     span{
+       color: var(--secondaryColor);
+       font-weight: 500;
+     }
+     &:last-child{
+       background:var(--paragraphColor) ;
+       padding: 1rem;
+       span{
+         font-weight: 700;
+       }
+     }
+
+     
+   }
+    .btn{
       display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-around;
-      margin: 0.5rem 0;
-      border-bottom: 2px solid #ccc;
-      padding: 1rem 0;
-  
-      .itemName {
-        font-size: 20px;
-        padding: 0.5rem 0;
-        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+      margin:  1rem auto;
+      button{
+        background: var(--primaryColor);
+        color: var(--textColor);
+        border: none;
+        outline: none;
+        padding: 1rem 1.5rem;
+        border-radius: 3rem;
+        &:hover{
+          background: var(--primaryHover);
+        }
+        
       }
-      .itemPrice {
-        font-size: 20px;
-        color: rgb(151, 8, 8);
-        font-weight: bold;
-      }
-    }
-  
-  
-   
-  
-    img {
-      height: 100px;
-      width: 100px;
-      border: 5px solid rgba(151, 8, 8, 0.294);
+      
     }
   }
 }
@@ -1013,6 +980,8 @@ li {
   .contactRow {
     display: grid;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
   form {
     margin: 1rem auto;
@@ -1268,9 +1237,19 @@ li {
   }
 }
 
+@media screen and (min-width: 640px){
+  .cartGrid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section {
     padding: 6rem 0;
+  }
+
+  .cartGrid{
+    padding: 2rem 4rem;
   }
 
   .boxesContainer {
@@ -1432,7 +1411,6 @@ li {
   }
   .aboutSection {
     margin-top: 4rem;
-  
   }
   .homeSection {
     position: relative;
@@ -1461,7 +1439,7 @@ li {
     gap: 0;
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .hotelName {
     font-size: 1.3rem !important;
   }
@@ -1486,9 +1464,9 @@ li {
   button {
     font-size: 1.2rem;
   }
-  .boxes{
-    .sHideNews{
-      display:block;
+  .boxes {
+    .sHideNews {
+      display: block;
     }
   }
 }
@@ -1503,8 +1481,8 @@ li {
       width: 700px;
       border-radius: 50%;
       background: var(--primaryColor);
-      left: 1100px;
-      bottom: 0;
+      left: 1000px;
+      bottom: -20px;
       z-index: 1;
     }
     .content {
@@ -1513,6 +1491,10 @@ li {
     .homeText {
       margin: auto;
     }
+  }
+
+  .cartGrid{
+    padding: 2rem 8rem;
   }
 
   .sectionBanner {
@@ -1528,17 +1510,18 @@ li {
   .homeText {
     span {
       font-size: 1.5rem !important;
+      padding-bottom: 3rem;
     }
 
     .introText {
       // line-height: 4rem !important;
       font-size: 3.5rem !important;
-      padding: 1.3rem 0 1.8rem !important;
+      padding: 3rem 0 1.8rem !important;
     }
 
     .homeParagraph {
       font-size: 18px;
-      padding-bottom: 1.5rem;
+      padding-bottom: 3rem;
     }
 
     .btn {

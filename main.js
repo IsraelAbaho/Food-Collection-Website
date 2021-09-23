@@ -2,6 +2,7 @@ const navBar = document.getElementById('nav_bar'),
       toggleBtn = document.getElementById('toggleId'),
       closeBtn = document.getElementById('closeId'),
       nav = document.querySelectorAll('.navLink');
+      const mainContainer = document.getElementsByTagName('tbody')[0];
 
 toggleBtn.addEventListener('click', ()=>{
     navBar.classList.add('showNavBar')
@@ -58,7 +59,7 @@ let time = `${days} Days  |   ${hrs}  Hrs   |    ${mins} Mins  |  ${secs}  Sec`;
 
 
 const addToCartBtn = document.querySelectorAll('.addToCartBtn');
-const mainContainer = document.getElementsByTagName('tbody')[0];
+
 
 for(let i =0; i<addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToCart)
@@ -72,7 +73,7 @@ let itemImage = btn.parentElement.parentElement.children[0].children[0].src;
 
 
 let cartContainer = document.createElement('tr');
-cartContainer.innerHTML = ` <td>
+cartContainer.innerHTML = `<td>
 <div class="imageInfor">
     <img src="${itemImage}" alt="Food Image">
     <div class="itemText">
