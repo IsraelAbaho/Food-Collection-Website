@@ -148,7 +148,7 @@ li {
     background: var(--primaryColor);
     left: 0;
     right: 0;
-    top: -100%;
+    top: -500%;
     padding: 2rem;
     border-bottom: 2px solid var(--secondaryColor);
     -webkit-transition: 0.3s;
